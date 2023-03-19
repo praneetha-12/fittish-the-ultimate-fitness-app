@@ -1,0 +1,32 @@
+from tkinter import*
+import random
+base = Tk()
+base.geometry('500x500')
+base.title("FITTISH!")
+def nextPage():
+base.destroy()
+import login
+labl_0 = Label(base, text="FITTISH!",width=20,font=("helvetica", 30),foreground='blue')
+labl_0.pack(side='left',anchor='nw',pady=20)
+text=Label(base, text='The Ultimate Fitness Guide',font=('Arial',20))
+text.place(x=150,y=80)
+image = PhotoImage(file="bg1.png")
+label = Label(base, image=image)
+label.place(x=800,y=200)
+           
+def health_tip():
+a=('Try a green smoothie – if you’re a regular smoothie drinker,\n throw in a handful of leafy greens to ramp up the nutrition value of your smoothie.','Stop and breathe – a quick session of deep breathing\n can help you feel more relaxed and less stressed.\n It only takes a moment but can relax your body for hours','Eat out less – when you cook at home, you know what’s in your food.\n Processed restaurant food has added sodium and fats and more calories.\n Even if it’s a simple salad, home cooking is best.' ,'See your physician for a yearly checkup \n– your physician can keep an eye on what’s going on with your body year after year.','Try a new healthy food \n– if you’ve been looking for an excuse to try that kumquat or asparagus, do it! \nYou never know when you’ll find a new favorite healthy snack.','Do some yoga – yoga is relaxing and good for your physical self. \nIf you’re a beginner, get started with simple exercises and meditation. \nYou’ll be an expert in no time!','Drink more water – even a glass more a day will help.\n Increasing water intake may boost your energy levels, help you obtain weight\n and fitness goals, and improve the quality of your skin.','Take a break from social media – stay off for a whole day.\n Studies have shown that social media can lead to a bad mood, low self-esteem, and anxiety.\n A break can be a refresher.','Pamper your feet – feet do a lot of work!\n They need some love. Schedule a massage, get a pedicure, or lather\n them in lotion and wear soft socks. Buy supportive, comfy shoes.','Lower your sugar intake – sugary foods age your skin, mess with digestion,\n and can make you moody and tired. Eat a banana, some watermelon,\n or some frozen grapes instead. ','Write down your goals – writing down goals makes them more tangible and realistic','Take a walk – walking is a great form of exercise \nand getting outside is good for your mood and health. Do it with a friend \nor family member for some extra-healthy quality time.','Declutter – you might think you need the things you have, but you really don’t. \nReducing clutter lowers stress and makes life simpler.\n Organize one spot at a time so it’s not overwhelming.','Try a new recipe – you may be in a rut with food or want to add in more fresh ingredients.\n This resource from Eating Well has a lot of different recipes so you’ll find something you love.','Lift some weights – bring out those dusty dumbbells and lift for 15 minutes. \nIt’s one of the best types of exercise to improve your body’s composition.\n Even a couple of canned veggies will do!','Do something you love – this can be as small as reading the chapter of a book, practicing a hobby, \nor eating a food you adore. It’s a great way to enhance your feel-good hormones.','Eat one dark leafy green vegetable per day – have broccoli at dinner, \nadd spinach to pasta sauce, or kale in your soup. Green veggies help protect us \nfrom disease and promote mental wellness.','Get your rest – Indians are notorious for not getting enough rest.\n Find out your sleep sweet spot (for some seven hours, others 10) and aim for it. \nHave a bedtime and wake-up routine.','Plan an outing – it could be a visit to a local brewery, time with friends, or a vacation.\n Making future exciting plans gives you something to anticipate, making dreary days more palatable.','Ditch the salt – use fresh herbs and pepper to season foods instead of dumping salt in.\n Salt can contribute to high blood pressure, which can lead to a number of physical issues.','Do some cardio – get your heart pumping for 30 minutes, three to four times a week.\n It will help you lose weight, regulate your blood pressure, and lower the risk of disease.','Be kind to yourself – you’re your own worst critic.\n Negative self-talk can impact you physically and mentally.\n Be as kind to yourself as you would be to another. ','Add a superfood to your diet – superfoods offer a high level of nutrition and are an immediate upgrade to your diet.\n Harvard Health has a great list of superfoods on its site.','Stretch at your desk – stand up every hour and stretch your body for two minutes. \nIt’s good to get your blood flowing. Stand up straight and check your posture during the stretch.','Take the stairs – using the stairs instead of elevators is a great way to \nboost your fitness and doesn’t feel like a huge commitment. Little changes make a great impact!','Pump up your breakfast – try a bowl of whole-grain oatmeal with berries or a plain yogurt parfait\n with berries and a little granola. It’s great to start the day with a healthy kick.','Take your B vitamins – B vitamins can help reduce some types of cancer and heart disease.\n They are found in many foods, including leafy greens, bananas, avocados, and eggs.','Share a compliment – compliments benefit the giver and the receiver.\n Making others happy boosts our own happiness, leading to more wellness.','Drink green tea – Green tea improves mental alertness, promotes weight loss,\n and has been studied for possible impact on reducing heart disease and cancer.','Switch up your evening routine – wind down before bed by taking a bath or reading a book.\n Stay off screens. They stimulate your brain and make healthy sleep more difficult to achieve.' )
+           
+p="" .join(random. sample (a,1))
+label=Label(base, text=p,font=('Arial',12))
+label.place(x=70,y=300)
+button.configure(state=DISABLED)
+text=Label(base, text='Come back tomorrow for another tip!',font=('Arial',15))
+text.place(x=150,y=400)
+button=Button(base, text="Health Tip Of The Day",font=('Verdena',20),width=20,height=2, bg='#ffd11a', command=health_tip)
+button.place(x=150,y=200)
+text=Label(base, text='What are you waiting for?\n Register now with Fittish and take a step towards a fit body!',font=('Segoe Print',15))
+text.place(x=40,y=600)
+button1 = Button(base, text="REGISTER",width=20,font=("helvetica", 23),command=nextPage,background='#ff704d')
+button1.place(x=150,y=700)
+base.mainloop()
